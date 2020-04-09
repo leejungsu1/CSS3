@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration.html</title>
+    <style>
+        h3::after{
+            content: " (필수)" attr(회원정보);
+            color: red;
+        }  
+        #caution1{
+            font-size: 5px; color: gainsboro;
+        }  
+        #caution2{
+            font-size: 5px; color: red;
+        }          
+    </style>
+</head>
+<body>
+    <h3 style="color: black ;">회원정보</h3>
+
+    <form action="">
+        아이디 : <input type="text" /> <button>아이디중복확인</button>
+        <span id=caution2>
+            아이디 형식에 맞춰주세요(영문,숫자 조합4문자 이상)
+        </span>
+        <br/>
+        비밀번호 : <input type="password" />
+        <span id="caution1">8~20자리의 영문, 숫자 조합(영문,숫자,특수기호 조합을 권장합니다.)
+
+        </span><br/>
+        비밀번호 확인 : <input type="password" /><br/>
+        이름 : <input type="text" /><br>
+        성별 : <input type="radio" name="gender" value="M" checked="checked" />남성
+            <input type="radio" name="gender" value="W" >여성
+            <br>
+        생년월일 : <input type="number" >
+            <input type="radio" name="birth" value="S" checked="checked" />양력
+            <input type="radio" name="birth" value="L" >음력
+            <br>
+        이메일 : <input type="text"> @ <input type="text">
+            <select name="email" id="email">
+                <option value="naver">naver.com</option>
+                <option value="hanmail">hanmail.net</option>
+                <option value="nate">nate.com</option>
+                <option value="yahoo">yahoo.com</option>
+            </select><br>
+        <span id="caution1">
+            이메일 수신동의 시, 신상품/할인혜택/이벤트 등의 정보를 받아보실 수 있습니다. <br> 
+            수신동의 거부 시에도 기본서비스(주문배송메일)는 발송됩니다.
+        </span>
+        <input type="radio" name="select" value="Y" checked="checked" />예
+        <input type="radio" name="select" value="N" >아니오
+        <br>
+        휴대전화 : <input type="tel">-<input type="tel">-<input type="tel"> <br>
+        <span id="caution1">
+            할인혜택과 이벤트 등의 소식 안내를 SMS로 받으실 수 있습니다. <br> 
+            수신동의 거부 시에도 기본서비스는 발송됩니다.
+        </span>
+        <input type="radio" name="select" value="Y" checked="checked" />예
+        <input type="radio" name="select" value="N" >아니오
+    </form>
+</body>
+</html>
