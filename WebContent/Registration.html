@@ -22,7 +22,14 @@
         .rag2{
             background-color:   #F5F5F5 ;
         }
-           
+        input{
+            margin: 5px;
+        }
+        button{
+            background-color: rgb(54, 206, 206);
+            color: white;
+            width: 120px;height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -31,7 +38,7 @@
     <form action="">
     <table class="reg1">
         <tr>
-            <td>아이디 : </td>
+            <td>아이디  </td>
             <td>
                 <input type="text" /> 
                 <button>아이디중복확인</button>
@@ -41,7 +48,7 @@
             </td>
         </tr>
         <tr>
-            <td>비밀번호 : </td>
+            <td>비밀번호  </td>
             <td><input type="password" />
                 <span id="caution1">
                     8~20자리의 영문, 숫자 조합(영문,숫자,특수기호 조합을 권장합니다.)
@@ -49,26 +56,26 @@
             </td>
         </tr>
         <tr>
-            <td>비밀번호 확인 : </td>
+            <td>비밀번호 확인  </td>
             <td>
                <input type="password" />
             </td>
         </tr>
         <tr>
-            <td>이름 : </td>
+            <td>이름  </td>
             <td>
                <input type="text" />
             </td>
         </tr>
         <tr>
-            <td>성별 : </td>
+            <td>성별  </td>
             <td>
                <input type="radio" name="gender" value="M" checked="checked" />남성
                     <input type="radio" name="gender" value="W" >여성
             </td> 
         </tr>  
         <tr>
-            <td>생년월일 : </td>
+            <td>생년월일  </td>
             <td>
                <input type="number">
                     <input type="radio" name="birth" value="S" checked="checked" />양력
@@ -76,7 +83,7 @@
             </td>
         </tr>
         <tr>
-            <td>이메일 : </td>
+            <td>이메일  </td>
             <td>
                 <input type="text"> @ <input type="text">
                     <select name="email" id="email">
@@ -89,37 +96,42 @@
                     이메일 수신동의 시, 신상품/할인혜택/이벤트 등의 정보를 받아보실 수 있습니다. <br> 
                     수신동의 거부 시에도 기본서비스(주문배송메일)는 발송됩니다.
                 </span>
-                <input type="radio" name="select" value="Y" checked="checked" />예
-                <input type="radio" name="select" value="N" >아니오
+                <input type="radio" name="select1" value="Y" checked="checked" />예
+                <input type="radio" name="select1" value="N" >아니오
             </td>
         </tr>
-            <td>휴대전화 : </td>
+            <td>휴대전화  </td>
             <td>
                <input type="tel">-<input type="tel">-<input type="tel"><br>
                 <span id="caution1">
                     할인혜택과 이벤트 등의 소식 안내를 SMS로 받으실 수 있습니다. <br> 
                     수신동의 거부 시에도 기본서비스는 발송됩니다.
                 </span>
-                <input type="radio" name="select" value="Y" checked="checked" />예
-                <input type="radio" name="select" value="N" >아니오
+                <input type="radio" name="select2" value="Y" checked="checked" />예
+                <input type="radio" name="select2" value="N" >아니오
             </td>
         </tr>
     </table>
     <table class="rag2">
-        <h4 style="color: black ;">부가정보</h4>
         <tr>
-            <td>일반전화 : </td>
+          <h4 style="color: black ;">부가정보</h4>
+        </tr>
+        <tr>
+            <td>일반전화  </td>
             <td>
                 <input type="tel">-<input type="tel">-<input type="tel">
             </td>
         </tr>
         <tr>
-            <td>주소 : </td>
-            <td><input type="text"><button>우편번호검색</button></td>
-            <td><input type="text"> <input type="text"></td>
+            <td>주소  </td>
+            <td>
+                <input type="text"><button>우편번호검색</button><br>
+                <input type="text"> <input type="text">
+            </td>
+            <td></td>
         </tr>
         <tr>
-            <td>직업 : </td>
+            <td>직업  </td>
             <td>
                 <select name="job" id="job">
                     <option value="empty">무직</option>
@@ -129,8 +141,66 @@
                 </select>
             </td>
         </tr>
-        tr>td
-        
+        <tr>
+            <td>관심 브랜드</td>
+            <td>
+                <input type="checkbox" name="select3" value="m">한빛미디어<br>
+                <input type="checkbox" name="select3" value="l">한빛라이프<br>
+                <input type="checkbox" name="select3" value="e">한빛에듀
+            </td>
+            <td> 
+                <input type="checkbox" name="select3" value="a" style="margin-left: -250px;">
+                한빛아카데미<br>
+                <input type="checkbox" name="select3" value="r" 
+                    style="margin-left: -250px;margin-bottom: 28px;">
+                리얼타임eBook 
+            </td> 
+            <td>
+                <input type="checkbox" name="select3" value="m" style="margin-left: -40px;">
+                MAKE <br>
+                <input type="checkbox" name="select3" value="b"
+                    style="margin-left: -40px;margin-bottom: 28px;">
+                    한빛비즈
+            </td>
+        </tr>
+        <tr>
+            <td >관심분야</td>
+            <td>
+                <input type="checkbox" name="select4" value="p" style="margin-top: 20px;">
+                프로그래밍
+                <br>
+                <input type="checkbox" name="select4" value="d">데이터베이스<br>
+                <input type="checkbox" name="select4" value="O">OA/오피스<br>
+                <input type="checkbox" name="select4" value="e">경제/경영<br>
+                <input type="checkbox" name="select4" value="t">여행/취미<br>
+                <input type="checkbox" name="select4" value="ect">
+                기타: <input type="text">
+            </td>
+            <td>
+                <input type="checkbox" name="select4" value="w" style="margin-left: -250px;">
+                웹<br>
+                <input type="checkbox" name="select4" value="n" style="margin-left: -250px;">
+                네트워크/보안<br>
+                <input type="checkbox" name="select4" value="d" style="margin-left: -250px;">
+                디자인<br>
+                <input type="checkbox" name="select4" value="s" style="margin-left: -250px;">
+                자기계발<br>
+                <input type="checkbox" name="select4" value="h" 
+                    style="margin-left: -250px; margin-bottom: 28px;">
+                    가정/건강/유아
+            </td>
+            <td>
+                <input type="checkbox" name="select4" value="m" style="margin-left: -40px;">
+                모바일/게임<br>
+                <input type="checkbox" name="select4" value="I" style="margin-left: -40px;">
+                IT자격증/수험서<br>
+                <input type="checkbox" name="select4" value="a" style="margin-left: -40px;">
+                사진/예술<br>
+                <input type="checkbox" name="select4" value="l" 
+                    style="margin-left: -40px;margin-bottom: 48px;">
+                인문/사회/과학
+            </td>
+        </tr>  
     </table>
     </form>
 </body>
