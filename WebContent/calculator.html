@@ -4,81 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator.html</title>
+    <style>
+        .calButton1{
+            width: 105px;
+            height: 70px;
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+            background-color:#373737;
+            border: 0px;
+        }
+        .calButton2{
+            width: 105px;
+            height: 70px;
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+            background-color:#FA960A;
+            border: 0px;
+        }
+        .calButton3{
+            width: 215px;
+            height: 75px;
+            border-radius: 15px;
+            font-size: 20px; 
+            color: white;
+            background-color: #7B7B7B;
+            border: 0px;
+        }
+        .calShow{
+            background-color: #70C738;
+            border-radius: 15px; 
+            font-size: 35px; 
+            padding-right: 10px; 
+            font-weight: bold;
+            height: 100px;
+            width: 400px;
+            border: 0px;
+            text-align:right;
+        }
+    </style>
+    <script>
+         
+        function calFunc(num) {
+            var result = document.getElementById("result");
+            result.value = result.value + num;
+            // // result.innerHTML = result.value + num;
+            // if(num==""){
+            //     result.value = eval(result.value);
+            // }
+            // else if(num=="c"){
+            //     result.value= "";
+            // }
+            // else{
+            //     result.value = result.value + num;
+            // }
+        }
+        function calAdd() {
+            var result = document.getElementById("result");
+            var final = eval(result.value);
+            result.value = final;
+        }
+        function calRemove() {
+            document.getElementById("result").value = "";
+        }
+        function calBack() {
+            var result = document.getElementById("result");
+            result.value = result.value.substring(0, result.value.length-1);
+        }
+    </script>
 </head>
 <body>
-    <table width="400" height="400" bgcolor="#DCDCDC" cellspacing="5"
+    <table width="400" height="500" bgcolor="#DCDCDC" cellspacing="5"
         style="border-radius: 15px; border: 2px solid rgba(194, 191, 191, 0.89);">
         <tr>
-            <td align="right" colspan="4" 
-                style="background-color: #70C738; border-radius: 15px; 
-                font-size: 35px; padding-right: 10px; font-weight: bold;">
-                123+654
+            <td align="right" colspan="4"class="calShow"> 
+                <input type="text" id="result" class="calShow"> 
             </td>
         </tr>
         <tr>
-            <th colspan="2" bgcolor="#7B7B7B" width="50%" 
-                style="border-radius: 15px; font-size: 18px; color: white;">
-                BackSpace
+            <th colspan="2">
+                <button class="calButton3" onclick="calBack();">BackSpace</button>
             </th>
-            <th colspan="2" bgcolor="#7B7B7B" 
-                style="border-radius: 15px;font-size: 18px; color: white;">
-                C
+            <th colspan="2">
+                <button class="calButton3" onclick="calRemove();">C</button>
             </th>
         </tr>
             <tr>
-                <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                    1
+                <th>
+                    <button class="calButton1" onclick="calFunc('1');">1</button>
                 </th>
-                <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                    2
+                <th >
+                    <button class="calButton1" onclick="calFunc('2');">2</button>
                 </th>
-                <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                    3
+                <th >
+                    <button class="calButton1" onclick="calFunc('3');">3</button>
                 </th>
-                <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #FA960A;">
-                    /
+                <th>
+                    <button class="calButton2" onclick="calFunc('/');">/</button>
                 </th>
         </tr>
         <tr>
-            <th style="border-radius: 12px;font-size: 18px; color: white; background-color: #373737;">
-                4
+            <th >
+                <button class="calButton1" onclick="calFunc('4');">4</button>
             </th>
-            <th style="border-radius: 12px;font-size: 18px; color: white; background-color: #373737;">
-                5
+            <th >
+                <button class="calButton1" onclick="calFunc('5');">5</button>
             </th>
-            <th style="border-radius: 12px;font-size: 18px; color: white; background-color: #373737;">
-                6
+            <th >
+                <button class="calButton1" onclick="calFunc('6');">6</button>
             </th>
-            <th style="border-radius: 12px;font-size: 18px; color: white; background-color: #FA960A;">
-                x
+            <th >
+                <button class="calButton2" onclick="calFunc('*');">x</button>
             </th>
             </tr>
         <tr>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                7
+            <th >
+                <button class="calButton1" onclick="calFunc('7');">7</button>
             </th>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                8
+            <th >
+                <button class="calButton1" onclick="calFunc('8');">8</button>
             </th>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                9
+            <th >
+                <button class="calButton1" onclick="calFunc('9');">9</button>
             </th>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #FA960A;">
-                +
+            <th >
+                <button class="calButton2" onclick="calFunc('+');">+</button>
             </th>
         </tr>
         <tr>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                =
+            <th >
+                <button class="calButton1" onclick="calAdd();">=</button>
             </th>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                0
+            <th >
+                <button class="calButton1" onclick="calFunc('0');">0</button>
             </th>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #373737;">
-                .
+            <th >
+                <button class="calButton1" onclick="calFunc('.');">.</button>
             </th>
-            <th style="border-radius: 15px;font-size: 18px; color: white; background-color: #FA960A;">
-                -
+            <th >
+                <button class="calButton2" onclick="calFunc('-');">-</button>
             </th>
         </tr>
     </table>
