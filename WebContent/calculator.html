@@ -62,7 +62,8 @@
         }
         function calAdd() {
             var result = document.getElementById("result");
-            var final = eval(result.value);
+            // var final = Math.ceil(eval(result.value)*100)/100;
+            var final = eval(result.value).toFixed(2);
             result.value = final;
         }
         function calRemove() {
@@ -78,8 +79,8 @@
     <table width="400" height="500" bgcolor="#DCDCDC" cellspacing="5"
         style="border-radius: 15px; border: 2px solid rgba(194, 191, 191, 0.89);">
         <tr>
-            <td align="right" colspan="4"class="calShow"> 
-                <input type="text" id="result" class="calShow"> 
+            <td colspan="4"class="calShow"> 
+                <input type="text" id="result" class="calShow" readonly> 
             </td>
         </tr>
         <tr>
